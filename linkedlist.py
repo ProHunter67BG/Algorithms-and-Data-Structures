@@ -2,6 +2,7 @@ class Node:
     def __init__(self, val=None, next=None):
         self.val = val
         self.next = next
+
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -17,7 +18,8 @@ class LinkedList:
         while itr.next:
             itr = itr.next
         itr.next = Node(data, None)
-    def get_lenght(self):
+
+    def get_lenght(self):d
         count = 0
         itr = self.head
         while itr:
@@ -25,6 +27,7 @@ class LinkedList:
             count += 1
             itr = itr.next
         return count
+
     def insert_at_position(self, position, data):
         if self.head is None:
             node = Node(data, self.head)
@@ -37,6 +40,7 @@ class LinkedList:
                 break
             itr = itr.next
             i += 1
+
     def remove_at(self, position):
         if self.head:
             return
@@ -49,6 +53,7 @@ class LinkedList:
 
             itr = itr.next
             i += 1
+
     def print_list(self):
         if self.head is None:
             return "Linked List is empty"
