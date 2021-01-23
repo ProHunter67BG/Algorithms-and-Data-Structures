@@ -19,7 +19,7 @@ class LinkedList:
             itr = itr.next
         itr.next = Node(data, None)
 
-    def get_legnth(self):
+    def get_length(self):
         count = 0
         itr = self.head
         while itr:
