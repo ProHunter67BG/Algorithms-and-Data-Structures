@@ -11,8 +11,8 @@ class LinkedList:
         self.head = node
     def insert_at_end(self, data):
         if self.head is None:
-            node = Node(data, self.head)
-            self.head = node
+            self.insert_at_end(data)
+            return
         itr = self.head
 
         while itr.next:
@@ -30,8 +30,8 @@ class LinkedList:
 
     def insert_at_position(self, position, data):
         if self.head is None:
-            node = Node(data, self.head)
-            self.head = node
+            self.insert_at_beginning(data)
+            return
         itr = self.head
         i = 0
         while itr.next:
